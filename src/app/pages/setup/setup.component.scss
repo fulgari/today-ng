@@ -1,0 +1,51 @@
+@import "../../../assets/scss/variables.scss";
+
+.page-content {
+    display: flex;
+    align-items: center; // 表示在flex容器中，当前flex中包含的items是如何分布的，可以理解为垂直方向上的排列
+    justify-content: center; // 表示在flex容器中，items中的内容应该如何分布，可以理解为水平方向上的分布
+    padding-top: 50px;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+        padding: 40px 30px 10px;
+        border-radius: 8px;
+        min-width: 300px; // 善用min-width、max-width能增加在不同屏幕上显示的兼容性
+        max-width: 350px;
+        min-height: 380px;
+        max-height: 400px;
+        height: 60vh;
+        width: 30vw;
+
+        .logo-img {
+            flex: 0 0 120px; // 直接使用（flex：g s b）中包含有三个参数，flex-grow表示放大与否，flex-shrink表示缩小与否, flex-basis表示基础大小
+            width: 120px;
+            height: 120px;
+        }
+
+        .text-wrapper {
+            flex: 1; // flex: g s b 的第一个参数flex-grow为1， 表示可以随显示尺寸变大而变大
+            display: flex;
+            text-align: center;
+            .title-text {
+                font-size: 24px;
+                color: $grey-text; // import另外一个scss文件进来的
+                font-weight: 100;
+                font-style: italic;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+        button {
+            width: 100%;
+            margin-top: 25px;
+        }
+
+        .copy-right {
+            font-size: smaller;
+            margin-top: 30px;
+        }
+    }
+}

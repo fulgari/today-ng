@@ -22,6 +22,7 @@ export class SetupComponent implements OnInit {
     this.store.set(INIT_FLAG, true);
     this.store.set(START_USING_DATE, getTodayTime());
     this.store.set(USERNAME, this.username);
+    console.log(this.store.getList(USERNAME));
   }
 
 }
