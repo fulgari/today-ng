@@ -1,0 +1,15 @@
+<div class="full-screen page-content">
+    <div class="wrapper">
+        <img class="logo-img" src="./assets/img/logo.png" alt="">
+        <div class="text-wrapper">
+            <h1 class="title-text">
+                Today
+            </h1>
+        </div>
+        <input nz-input placeholder="Please input your username" #usernameInput [(ngModel)]="username">
+        <button nz-button [nzType]="'primary'" (click)="completeSetup()" [disabled]="!usernameInput.value">Start</button>
+        <div class="copy-right">
+            Copyright © 2018 Alibaba
+        </div>
+    </div>
+</div>
