@@ -1,0 +1,33 @@
+import { generateUUID } from 'src/app/utils/uuid';
+
+export class Todo {
+    _id: string;
+    title: string;
+    createdAt: number;
+    listUUID: string;
+    desc: string;
+    completedFlag: boolean;
+    completedAt: number;
+    dueAt: number;
+    planAt: number;
+    notifyMe = false;
+    
+    constructor(title: string, listUUID?: string) {
+        this._id = generateUUID();
+        this.title = title;
+        this.listUUID = listUUID;
+        this.completedFlag = false;
+    }
+
+}
+
+export class List {
+    _id: string;
+    title: string;
+    createdAt: number;
+
+    constructor(title: string) {
+        this._id = generateUUID(); // 只要新建一个List/Todo，就会自动给其_id赋值一个新生成的UUID
+        this.title = title
+    }
+}

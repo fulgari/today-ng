@@ -18,6 +18,9 @@ export class LocalStorageService {
     return before ? (JSON.parse(before) as T[]) : [];
   }
 
+  // 本地存储中，是通过键值对来进行保存的。
+  // key已经先行在local-storage.namespace中定义好了
+  // 对每个键，我们都有一个数组用来存储
   public set(key: string, value: any): void {
     if(!value && value === undefined) {
       return;
